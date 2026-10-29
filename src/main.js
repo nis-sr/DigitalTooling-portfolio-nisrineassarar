@@ -1,9 +1,12 @@
 import './style.css';
+import logo from './assets/logo.svg';
 
 document.querySelector('#app').innerHTML = `
   <header>
     <nav>
-      <a href="#home">LOGO</a>
+      <a href="#home" class="logo">
+  <img src="${logo}" alt="Nisrine Assarar logo">
+</a>
 
       <div class="nav-links">
         <a href="#home">HOME</a>
