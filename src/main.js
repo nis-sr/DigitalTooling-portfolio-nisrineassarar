@@ -68,7 +68,9 @@ document.querySelector('#app').innerHTML = `
   <p>WEB DEVELOPMENT</p>
 </article>
 
-        <article class="project-card">
+        <article class="project-card" id="doodle-project"
+         role="button" tabindex="0"
+         aria-haspopup="dialog" aria-controls="doodle-modal">
   <div class="project-image">
     <img src="${googleDoodle}" alt="Google Doodle animation">
 
@@ -206,6 +208,64 @@ document.querySelector('#app').innerHTML = `
 
   </div>
 </div>
+<!-- ===== GOOGLE DOODLE MODAL ===== -->
+
+<div id="doodle-modal" class="project-modal"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="doodle-modal-title"
+     aria-hidden="true">
+
+  <div class="modal-content">
+
+    <button class="modal-close" type="button"
+            aria-label="Close Google Doodle project">
+      &times;
+    </button>
+
+    <h2 id="doodle-modal-title">GOOGLE DOODLE</h2>
+
+    <div class="modal-video">
+      <video controls preload="metadata" playsinline>
+        <source src="/videos/google-doodle.mp4" type="video/mp4">
+        Your browser does not support HTML video.
+      </video>
+    </div>
+
+    <div class="modal-details">
+
+      <div class="modal-column">
+
+        <div class="modal-info">
+          <h3>CONCEPT</h3>
+          <p>An animated Google Doodle featuring playful alien characters.</p>
+        </div>
+
+        <div class="modal-info">
+          <h3>TOOLS</h3>
+          <p>Adobe After Effects</p>
+        </div>
+
+      </div>
+
+      <div class="modal-column">
+
+        <div class="modal-info">
+          <h3>PROCESS</h3>
+          <p>Character animation, motion design and visual composition.</p>
+        </div>
+
+        <div class="modal-info">
+          <h3>RESULT</h3>
+          <p>A short animated Google Doodle.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
 
   </main>
 `;
@@ -306,5 +366,56 @@ yumspotModal.addEventListener('click', (event) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && yumspotModal.style.display === 'flex') {
     closeYumspotModal();
+  }
+});
+
+// ===== GOOGLE DOODLE MODAL =====
+
+const doodleProject = document.querySelector('#doodle-project');
+const doodleModal = document.querySelector('#doodle-modal');
+const doodleCloseButton = doodleModal.querySelector('.modal-close');
+
+function openDoodleModal() {
+  doodleModal.style.display = 'flex';
+  doodleModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  doodleCloseButton.focus();
+}
+
+function closeDoodleModal() {
+  const video = doodleModal.querySelector('video');
+  video?.pause();
+
+  doodleModal.style.display = 'none';
+  doodleModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  doodleProject.focus();
+}
+
+// Ouvrir au clic
+doodleProject.addEventListener('click', openDoodleModal);
+
+// Ouvrir avec Entrée ou Espace
+doodleProject.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    openDoodleModal();
+  }
+});
+
+// Fermer avec ×
+doodleCloseButton.addEventListener('click', closeDoodleModal);
+
+// Fermer en cliquant sur le fond sombre
+doodleModal.addEventListener('click', (event) => {
+  if (event.target === doodleModal) {
+    closeDoodleModal();
+  }
+});
+
+// Fermer avec Échap
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && doodleModal.style.display === 'flex') {
+    closeDoodleModal();
   }
 });
