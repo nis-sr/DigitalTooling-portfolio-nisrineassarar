@@ -130,6 +130,38 @@ document.querySelector('#app').innerHTML = `
 
 </section>
 
+<!-- ===== CONTACT SECTION ===== -->
+
+<section id="contact" class="contact-section">
+
+  <div class="contact-content">
+
+    <h2>Let's Create Something Together.</h2>
+
+    <p>
+      Have a project in mind or want to collaborate?
+      Let's talk.
+    </p>
+
+    <a href="mailto:TON-EMAIL@exemple.com" class="contact-button">
+      GET IN TOUCH
+    </a>
+
+    <div class="contact-links">
+  <a href="mailto:nisrine.assarar@hotmail.com">EMAIL</a>
+  <a href="https://github.com/nis-sr"
+     target="_blank"
+     rel="noopener noreferrer">
+    GITHUB
+  </a>
+</div>
+
+    <p class="copyright">© 2026 NISRINE ASSARAR</p>
+
+  </div>
+
+</section>  
+
     <!-- Video Portrait Modal -->
 <div id="video-modal" class="project-modal" role="dialog"
      aria-modal="true" aria-labelledby="video-modal-title"
