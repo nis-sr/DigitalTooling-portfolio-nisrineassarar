@@ -51,7 +51,9 @@ document.querySelector('#app').innerHTML = `
 
         </article>
 
-        <article class="project-card">
+        <article class="project-card" id="yumspot-project"
+         role="button" tabindex="0"
+         aria-haspopup="dialog" aria-controls="yumspot-modal">
   <div class="project-image">
     <img src="${yumspot}" alt="YumSpot web application">
 
@@ -133,8 +135,82 @@ document.querySelector('#app').innerHTML = `
 
   </div>
 </div>
+  </div>
+</div>
+
+<!-- ===== YUMSPOT MODAL ===== -->
+
+<div id="yumspot-modal" class="project-modal"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="yumspot-modal-title"
+     aria-hidden="true">
+
+  <div class="modal-content">
+
+    <button class="modal-close" type="button" aria-label="Close YumSpot project">
+      &times;
+    </button>
+
+    <h2 id="yumspot-modal-title">YUMSPOT</h2>
+
+    <div class="modal-preview">
+    <iframe
+    src="https://nis-sr.github.io/web-advanced/"
+    title="YumSpot interactive recipe application"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+    </div>
+
+    <div class="modal-details">
+
+      <div class="modal-column">
+
+        <div class="modal-info">
+          <h3>CONCEPT</h3>
+          <p>A recipe discovery web application powered by TheMealDB API.</p>
+        </div>
+
+        <div class="modal-info">
+          <h3>TOOLS</h3>
+          <p>JavaScript, Web Development, TheMealDB API</p>
+        </div>
+
+      </div>
+
+      <div class="modal-column">
+
+        <div class="modal-info">
+          <h3>PROCESS</h3>
+          <p>API integration, recipe search, filtering, sorting and favorites functionality.</p>
+        </div>
+
+        <div class="modal-info">
+          <h3>RESULT</h3>
+          <p>An interactive single-page application for discovering and saving recipes.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <a
+  class="modal-project-button"
+  href="https://nis-sr.github.io/web-advanced/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  VIEW PROJECT
+  </a>
+
+  </div>
+</div>
+
   </main>
 `;
+
+
 // ===== VIDEO PORTRAIT MODAL =====
 
 const videoProject = document.querySelector('#video-project');
@@ -182,5 +258,53 @@ videoModal.addEventListener('click', (event) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && videoModal.style.display === 'flex') {
     closeVideoModal();
+  }
+});
+
+// ===== YUMSPOT MODAL =====
+
+const yumspotProject = document.querySelector('#yumspot-project');
+const yumspotModal = document.querySelector('#yumspot-modal');
+const yumspotCloseButton = yumspotModal.querySelector('.modal-close');
+
+function openYumspotModal() {
+  yumspotModal.style.display = 'flex';
+  yumspotModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  yumspotCloseButton.focus();
+}
+
+function closeYumspotModal() {
+  yumspotModal.style.display = 'none';
+  yumspotModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  yumspotProject.focus();
+}
+
+// Ouvrir en cliquant sur YumSpot
+yumspotProject.addEventListener('click', openYumspotModal);
+
+// Ouvrir avec Entrée ou Espace
+yumspotProject.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    openYumspotModal();
+  }
+});
+
+// Fermer avec le bouton ×
+yumspotCloseButton.addEventListener('click', closeYumspotModal);
+
+// Fermer en cliquant sur le fond sombre
+yumspotModal.addEventListener('click', (event) => {
+  if (event.target === yumspotModal) {
+    closeYumspotModal();
+  }
+});
+
+// Fermer avec Échap
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && yumspotModal.style.display === 'flex') {
+    closeYumspotModal();
   }
 });
