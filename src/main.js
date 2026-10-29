@@ -33,23 +33,52 @@ document.querySelector('#app').innerHTML = `
 
       <div class="projects-grid">
 
-        <article class="project-card">
-           <img src="${videoPortrait}" alt="Video Portrait project">
-           <h3>VIDEO PORTRAIT</h3>
-           <p>AUDIOVISUAL</p>
+       <article class="project-card">
+
+        <div class="project-image">
+            <img src="${videoPortrait}" alt="Video Portrait project">
+
+          <div class="project-overlay">
+             <span>AN AUDIOVISUAL PRODUCTION</span>
+             <h3>VIDEO PORTRAIT</h3>
+             <span>EDITED WITH PREMIERE PRO</span>
+          </div>
+        </div>
+
+        <h3>VIDEO PORTRAIT</h3>
+        <p>AUDIOVISUAL</p>
+
         </article>
 
         <article class="project-card">
-          <img src="${yumspot}" alt="YumSpot web application">
-          <h3>YUMSPOT</h3>
-          <p>WEB DEVELOPMENT</p>
-        </article>
+  <div class="project-image">
+    <img src="${yumspot}" alt="YumSpot web application">
+
+    <div class="project-overlay">
+      <span>A WEB DEVELOPMENT PROJECT</span>
+      <h3>YUMSPOT</h3>
+      <span>DISCOVER YOUR NEXT FAVORITE MEAL</span>
+    </div>
+  </div>
+
+  <h3>YUMSPOT</h3>
+  <p>WEB DEVELOPMENT</p>
+</article>
 
         <article class="project-card">
-          <img src="${googleDoodle}" alt="Google Doodle animation">
-          <h3>GOOGLE DOODLE</h3>
-          <p>MOTION DESIGN</p>
-        </article>
+  <div class="project-image">
+    <img src="${googleDoodle}" alt="Google Doodle animation">
+
+    <div class="project-overlay">
+      <span>AN ANIMATION PROJECT</span>
+      <h3>GOOGLE DOODLE</h3>
+      <span>CREATED WITH AFTER EFFECTS</span>
+    </div>
+  </div>
+
+  <h3>GOOGLE DOODLE</h3>
+  <p>MOTION DESIGN</p>
+</article>
 
       </div>
     </section>
