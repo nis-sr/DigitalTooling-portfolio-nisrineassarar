@@ -3,6 +3,7 @@ import logo from './assets/logo.svg';
 import videoPortrait from './assets/video-portrait.png';
 import yumspot from './assets/yumspot.png';
 import googleDoodle from './assets/google-doodle.png';
+import aboutMe from './assets/about-me.jpg';
 
 document.querySelector('#app').innerHTML = `
   <header>
@@ -87,6 +88,48 @@ document.querySelector('#app').innerHTML = `
 
       </div>
     </section>
+
+    <!-- ===== ABOUT ME ===== -->
+
+<section id="about" class="about-section">
+
+  <h2>ABOUT ME</h2>
+
+  <div class="about-container">
+
+    <div class="about-image">
+      <img src="${aboutMe}" alt="Creative workspace with laptop and desk accessories">
+    </div>
+
+    <div class="about-content">
+
+      <h3>Hi, I'm Nisrine.</h3>
+
+      <p>
+        I'm a creative digital designer passionate about technology,
+        visual storytelling and interactive experiences.
+      </p>
+
+      <p>
+        I enjoy combining design and technology to create engaging
+        and intuitive digital experiences.
+      </p>
+
+      <h4>MY SKILLS</h4>
+
+      <div class="skills-list">
+        <span>Web Design</span>
+        <span>Visual Design</span>
+        <span>Video Editing</span>
+        <span>UI/UX</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
     <!-- Video Portrait Modal -->
 <div id="video-modal" class="project-modal" role="dialog"
      aria-modal="true" aria-labelledby="video-modal-title"
