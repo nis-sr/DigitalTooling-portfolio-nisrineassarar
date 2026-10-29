@@ -33,8 +33,9 @@ document.querySelector('#app').innerHTML = `
 
       <div class="projects-grid">
 
-       <article class="project-card">
-
+      <article class="project-card" id="video-project"
+         role="button" tabindex="0"
+         aria-haspopup="dialog" aria-controls="video-modal">
         <div class="project-image">
             <img src="${videoPortrait}" alt="Video Portrait project">
 
@@ -82,5 +83,104 @@ document.querySelector('#app').innerHTML = `
 
       </div>
     </section>
+    <!-- Video Portrait Modal -->
+<div id="video-modal" class="project-modal" role="dialog"
+     aria-modal="true" aria-labelledby="video-modal-title"
+     aria-hidden="true">
+
+  <div class="modal-content">
+
+    <button class="modal-close" type="button" aria-label="Close project">
+      &times;
+    </button>
+
+    <h2 id="video-modal-title">VIDEO PORTRAIT</h2>
+
+    <div class="modal-video">
+  <video controls preload="metadata" playsinline>
+    <source src="/videos/video-portrait.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+</div>
+
+    <div class="modal-details">
+
+  <div class="modal-column">
+    <div class="modal-info">
+      <h3>CONCEPT</h3>
+      <p>A cinematic video portrait capturing a creative personality.</p>
+    </div>
+
+    <div class="modal-info">
+      <h3>TOOLS</h3>
+      <p>Adobe Premiere Pro</p>
+    </div>
+  </div>
+
+  <div class="modal-column">
+    <div class="modal-info">
+      <h3>PROCESS</h3>
+      <p>Multicam editing, B-roll selection, audio enhancement and colour correction.</p>
+    </div>
+
+    <div class="modal-info">
+      <h3>RESULT</h3>
+      <p>A 45-second video portrait combining interviews and creative visuals.</p>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+</div>
   </main>
 `;
+// ===== VIDEO PORTRAIT MODAL =====
+
+const videoProject = document.querySelector('#video-project');
+const videoModal = document.querySelector('#video-modal');
+const closeButton = videoModal.querySelector('.modal-close');
+
+function openVideoModal() {
+  videoModal.style.display = 'flex';
+  videoModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  closeButton.focus();
+}
+
+function closeVideoModal() {
+  const video = videoModal.querySelector('video');
+  video?.pause();
+  videoModal.style.display = 'none';
+  videoModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  videoProject.focus();
+}
+
+// Ouvrir en cliquant sur la carte
+videoProject.addEventListener('click', openVideoModal);
+
+// Ouvrir avec Entrée ou Espace
+videoProject.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    openVideoModal();
+  }
+});
+
+// Fermer avec le bouton ×
+closeButton.addEventListener('click', closeVideoModal);
+
+// Fermer en cliquant sur le fond sombre
+videoModal.addEventListener('click', (event) => {
+  if (event.target === videoModal) {
+    closeVideoModal();
+  }
+});
+
+// Fermer avec Échap
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && videoModal.style.display === 'flex') {
+    closeVideoModal();
+  }
+});
