@@ -169,6 +169,11 @@ document.querySelector('#app').innerHTML = `
      rel="noopener noreferrer">
     GITHUB
   </a>
+   <a href="https://www.linkedin.com/in/nisrine-assarar-605337364/"
+     target="_blank"
+     rel="noopener noreferrer">
+    LINKEDIN
+  </a>
 </div>
 
     <p class="copyright">© 2026 NISRINE ASSARAR</p>
