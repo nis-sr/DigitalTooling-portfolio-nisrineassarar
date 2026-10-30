@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 /* ===== GLOBAL ===== */
 
 * {
@@ -12,7 +13,7 @@ body {
   margin: 0;
   background: #100f13;
   color: #f5ede7;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 a {
@@ -36,7 +37,7 @@ nav {
 
 nav > a {
   color: #d7b67a;
-  font-family: Georgia, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 32px;
 }
 
@@ -81,7 +82,7 @@ nav > a {
 }
 
 #home h1 {
-  font-family: Georgia, serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: normal;
   font-size: clamp(48px, 7vw, 110px);
   margin: 30px 0;
@@ -152,7 +153,7 @@ nav > a {
 }
 
 .projects-section h2 {
-  font-family: Georgia, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: clamp(32px, 4vw, 52px);
   font-weight: normal;
   margin: 0 0 45px;
@@ -190,7 +191,7 @@ nav > a {
 }
 
 .project-card h3 {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 23px;
   font-weight: 500;
   margin: 12px 0 4px;
@@ -295,7 +296,7 @@ nav > a {
 
 /* Titre sur l'affiche */
 .project-overlay h3 {
-  font-family: Georgia, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 28px;
   margin: 8px 0;
 }
@@ -392,7 +393,7 @@ nav > a {
 
 /* Titre */
 .modal-content h2 {
-  font-family: Georgia, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 38px;
   font-weight: normal;
   margin: 0 0 25px;
@@ -458,7 +459,7 @@ nav > a {
 
 .modal-info h3 {
   color: #d7b67a;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 22px;
   font-weight: 400;
   letter-spacing: 0;
@@ -523,7 +524,7 @@ nav > a {
   border: none;
   border-radius: 30px;
 
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -574,7 +575,7 @@ nav > a {
 }
 
 .about-section h2 {
-  font-family: Georgia, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: clamp(32px, 4vw, 52px);
   font-weight: normal;
   margin: 0 0 55px;
@@ -596,7 +597,7 @@ nav > a {
 }
 
 .about-content h3 {
-  font-family: Georgia, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 34px;
   font-weight: normal;
   margin: 0 0 25px;
@@ -681,7 +682,7 @@ nav > a {
 }
 
 .contact-content h2 {
-  font-family: Georgia, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: clamp(40px, 5vw, 68px);
   font-weight: normal;
   line-height: 1.2;
@@ -705,7 +706,7 @@ nav > a {
   border-radius: 30px;
   text-decoration: none;
 
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -904,7 +905,7 @@ nav > a {
 
   /* Texte */
   color: #f5ede7;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 2px;
@@ -927,4 +928,8 @@ nav > a {
   .cinematic-intro {
     cursor: pointer;
   }
+}
+
+body {
+  font-family: "Inter", sans-serif;
 }
