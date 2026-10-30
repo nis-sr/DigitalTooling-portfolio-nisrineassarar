@@ -513,7 +513,6 @@ document.addEventListener('keydown', (event) => {
 // ===== FLASHLIGHT INTRO =====
 
 const cinematicIntro = document.querySelector('#cinematic-intro');
-const skipIntroButton = document.querySelector('#skip-intro');
 
 let introClosed = false;
 
@@ -545,8 +544,3 @@ function closeCinematicIntro() {
 // Cliquer n'importe où pour révéler la Home
 cinematicIntro.addEventListener('click', closeCinematicIntro);
 
-// Skip Intro
-skipIntroButton.addEventListener('click', (event) => {
-  event.stopPropagation();
-  closeCinematicIntro();
-});
