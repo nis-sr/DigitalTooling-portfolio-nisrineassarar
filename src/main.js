@@ -6,6 +6,21 @@ import googleDoodle from './assets/google-doodle.png';
 import aboutMe from './assets/about-me.jpg';
 
 document.querySelector('#app').innerHTML = `
+
+  <!-- ===== CINEMATIC INTRO ===== -->
+
+ <!-- ===== FLASHLIGHT INTRO ===== -->
+
+  <div id="cinematic-intro" class="cinematic-intro">
+  <div class="intro-darkness"></div>
+
+  <div class="intro-cursor-text" aria-hidden="true">
+  CLICK TO REVEAL
+  </div>
+  
+
+</div>
+
   <header>
     <nav>
       <a href="#home" class="logo">
@@ -143,7 +158,7 @@ document.querySelector('#app').innerHTML = `
       Let's talk.
     </p>
 
-    <a href="mailto:TON-EMAIL@exemple.com" class="contact-button">
+    <a href="mailto:nisrine.assarar@hotmail.com" class="contact-button">
       GET IN TOUCH
     </a>
 
@@ -493,4 +508,45 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && doodleModal.style.display === 'flex') {
     closeDoodleModal();
   }
+});
+
+// ===== FLASHLIGHT INTRO =====
+
+const cinematicIntro = document.querySelector('#cinematic-intro');
+const skipIntroButton = document.querySelector('#skip-intro');
+
+let introClosed = false;
+
+// Empêcher de faire défiler le site pendant l'intro
+document.body.style.overflow = 'hidden';
+
+// Déplacer la lampe torche
+cinematicIntro.addEventListener('pointermove', (event) => {
+  if (introClosed) return;
+
+  cinematicIntro.style.setProperty('--mouse-x', `${event.clientX}px`);
+  cinematicIntro.style.setProperty('--mouse-y', `${event.clientY}px`);
+});
+
+// Révéler toute la Home
+function closeCinematicIntro() {
+  if (introClosed) return;
+
+  introClosed = true;
+  cinematicIntro.classList.add('is-hidden');
+
+  document.body.style.overflow = '';
+
+  cinematicIntro.addEventListener('transitionend', () => {
+    cinematicIntro.hidden = true;
+  }, { once: true });
+}
+
+// Cliquer n'importe où pour révéler la Home
+cinematicIntro.addEventListener('click', closeCinematicIntro);
+
+// Skip Intro
+skipIntroButton.addEventListener('click', (event) => {
+  event.stopPropagation();
+  closeCinematicIntro();
 });

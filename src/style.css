@@ -771,3 +771,160 @@ nav > a {
     font-size: 13px;
   }
 }
+
+/* ===== YUMSPOT MOBILE PREVIEW ===== */
+
+@media (max-width: 600px) {
+
+  #yumspot-modal .modal-content {
+    padding: 25px 15px;
+  }
+
+  #yumspot-modal .modal-preview {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #yumspot-modal .modal-preview iframe {
+    display: block;
+    width: 100%;
+    height: 420px;
+    border: none;
+  }
+
+}
+
+/* ===== FLASHLIGHT CINEMATIC INTRO ===== */
+
+.cinematic-intro {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --light-size: 300px;
+
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  background: transparent;;
+  isolation: isolate;
+
+  cursor: none;
+  transition: opacity 0.9s ease, visibility 0.9s ease;
+}
+
+/* Couche noire avec trou de lumière */
+.intro-darkness {
+  position: absolute;
+  inset: 0;
+
+  background: #000;
+
+  -webkit-mask-image: radial-gradient(
+    circle var(--light-size) at var(--mouse-x) var(--mouse-y),
+    transparent 0%,
+    transparent 40%,
+    rgba(0, 0, 0, 0.65) 75%,
+    #000 100%
+  );
+
+  mask-image: radial-gradient(
+    circle var(--light-size) at var(--mouse-x) var(--mouse-y),
+    transparent 0%,
+    transparent 40%,
+    rgba(0, 0, 0, 0.65) 75%,
+    #000 100%
+  );
+
+  pointer-events: none;
+}
+
+/* Bouton Skip */
+.skip-intro {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 2;
+
+  border: 1px solid #d7b67a;
+  border-radius: 25px;
+  background: #000;
+  color: #d7b67a;
+
+  padding: 12px 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+}
+
+/* Sortie de l'intro */
+.cinematic-intro.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.cinematic-intro[hidden] {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .cinematic-intro {
+    --light-size: 180px;
+  }
+
+  .skip-intro {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-intro {
+    transition: none;
+  }
+}
+
+/* ===== INTRO CURSOR LABEL ===== */
+
+.intro-cursor-text {
+  position: absolute;
+  left: var(--mouse-x);
+  top: var(--mouse-y);
+
+  transform: translate(-50%, 40px);
+  z-index: 3;
+  pointer-events: none;
+
+  /* Rectangle */
+  background: rgba(10, 8, 10, 0.95);
+  border: 1px solid #d7b67a;
+  border-radius: 8px;
+  padding: 12px 20px;
+
+  /* Texte */
+  color: #f5ede7;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  white-space: nowrap;
+
+  /* Ombre */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Indication adaptée au tactile */
+@media (pointer: coarse) {
+  .intro-cursor-text {
+    display: block;
+    left: 50%;
+    top: auto;
+    bottom: 12%;
+    transform: translateX(-50%);
+  }
+
+  .cinematic-intro {
+    cursor: pointer;
+  }
+}
