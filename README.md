@@ -90,37 +90,35 @@ Some of the main technical challenges where I received assistance were:
 **1. GitHub Actions deployment**
 
 I received assistance with setting up the `deploy.yml` workflow to automatically build and deploy my Vite project to GitHub Pages.
-<img width="1961" height="1354" alt="Screenshot 2026-10-30 182826" src="https://github.com/user-attachments/assets/9a3b1a59-be99-4ecf-bcdd-7c2ab7b0e101" />
 
 - File: `.github/workflows/deploy.yml`
-
+<img width="1961" height="1359" alt="Screenshot 2026-10-30 234317" src="https://github.com/user-attachments/assets/628b8a6a-6aa4-4de5-99b1-f38ca6ce722c" />
 **2. Interactive flashlight introduction**
 
 I received assistance with implementing a flashlight effect that follows the mouse and reveals the homepage using CSS `mask-image` and JavaScript pointer events.
-<img width="1960" height="1363" alt="Screenshot 2026-10-30 182808" src="https://github.com/user-attachments/assets/459f610a-a824-46be-bd1f-a91438f6919e" />
 
 - Files: `src/main.js`, `src/style.css`
-
+<img width="1951" height="1375" alt="Screenshot 2026-10-30 234238" src="https://github.com/user-attachments/assets/bf8010dd-b19e-4430-b002-1b5b8abd49e4" />
 **3. Interactive project modals**
 
 I received assistance with implementing project pop-ups, keyboard interactions, closing modals and stopping video playback automatically.
-<img width="1958" height="1356" alt="Screenshot 2026-10-30 182747" src="https://github.com/user-attachments/assets/2fd00654-1b65-4b87-b1c6-b80c788c27d6" />
 
 - Files: `src/main.js`, `src/style.css`
-
+<img width="1961" height="1361" alt="Screenshot 2026-10-30 234138" src="https://github.com/user-attachments/assets/f2c9bf16-dc77-4f4a-8105-12b31e2b88ac" />
 **4. Embedded YumSpot application**
 
 I received assistance with integrating my YumSpot website inside the portfolio using an iframe and adjusting its responsive display.
-<img width="1963" height="1354" alt="Screenshot 2026-10-30 182725" src="https://github.com/user-attachments/assets/4405d9fd-45b7-4b01-8f29-e4175c75ef46" />
+<i
 
 - Files: `src/main.js`, `src/style.css`
+mg width="1958" height="1356" alt="Screenshot 2026-10-30 233749" src="https://github.com/user-attachments/assets/c37c363d-20c3-44e7-b68e-2b213fc62a01" />
 
 **5. Vite configuration**
 
 I received assistance with configuring asset paths for GitHub Pages and resolving issues with video files and deployment.
-<img width="1961" height="1347" alt="Screenshot 2026-10-30 182656" src="https://github.com/user-attachments/assets/02d6a056-4047-4829-981d-c06769276d5b" />
 
 - Files: `vite.config.js`, `src/main.js`
+<img width="1961" height="1417" alt="Screenshot 2026-10-30 233644" src="https://github.com/user-attachments/assets/309760ed-e908-49b5-8575-8228796dd40d" />
 
 ### Other resources
 
