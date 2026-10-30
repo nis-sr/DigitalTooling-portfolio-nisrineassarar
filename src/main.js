@@ -197,7 +197,7 @@ document.querySelector('#app').innerHTML = `
 
     <div class="modal-video">
   <video controls preload="metadata" playsinline>
-    <source src="/videos/video-portrait.mp4" type="video/mp4">
+    <source src="${import.meta.env.BASE_URL}videos/video-portrait.mp4" type="video/mp4">
     Your browser does not support HTML video.
   </video>
 </div>
@@ -322,7 +322,8 @@ document.querySelector('#app').innerHTML = `
 
     <div class="modal-video">
       <video controls preload="metadata" playsinline>
-        <source src="/videos/google-doodle.mp4" type="video/mp4">
+        <!-- Google Doodle -->
+        <source src="${import.meta.env.BASE_URL}videos/google-doodle.mp4" type="video/mp4">
         Your browser does not support HTML video.
       </video>
     </div>
