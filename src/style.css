@@ -160,7 +160,7 @@ nav > a {
   color: #f5ede7;
 }
 
-/* Les trois projets côte à côte */
+/* 3projecten naast mekaar */
 
 .projects-grid {
   display: grid;
@@ -169,7 +169,7 @@ nav > a {
   align-items: start;
 }
 
-/* Chaque carte */
+/* Elke kaart */
 
 .project-card {
   text-align: center;
@@ -205,7 +205,7 @@ nav > a {
   color: #d7b67a;
 }
 
-/* Petit effet au survol */
+/* Een klein effect bij het overvliegen */
 
 .project-card:hover img {
   transform: translateY(-6px);
@@ -256,7 +256,7 @@ nav > a {
   }
 }
 
-/* Conteneur de l'affiche */
+/* Posterhouder */
 .project-image {
   position: relative;
   overflow: hidden;
@@ -270,7 +270,7 @@ nav > a {
   object-fit: cover;
 }
 
-/* Texte affiché sur l'image */
+/* Tekst op de afbeelding */
 .project-overlay {
   position: absolute;
   inset: 0;
@@ -294,24 +294,24 @@ nav > a {
   transition: opacity 0.3s ease;
 }
 
-/* Titre sur l'affiche */
+/* Titel op de affiche */
 .project-overlay h3 {
   font-family: "Cormorant Garamond", serif;
   font-size: 28px;
   margin: 8px 0;
 }
 
-/* Petits textes dorés */
+/* Kleine vergulde teksten */
 .project-overlay span:first-child {
   color: #d6b47b;
 }
 
-/* Apparition au survol */
+/* Verschijning bij het overvliegen */
 .project-image:hover .project-overlay {
   opacity: 1;
 }
 
-/* Même hauteur pour les trois affiches */
+/* Dezelfde hoogte voor de drie affiches */
 .project-image {
   height: 500px;
 }
@@ -351,7 +351,7 @@ nav > a {
   overflow-y: auto;
 }
 
-/* Fenêtre du pop-up */
+/* Pop-upvenster */
 .modal-content {
   position: relative;
   width: 100%;
@@ -373,7 +373,7 @@ nav > a {
   color: #f5ede7;
 }
 
-/* Bouton de fermeture */
+/* Sluitknop */
 .modal-close {
   position: absolute;
   top: 18px;
@@ -391,7 +391,7 @@ nav > a {
   color: #ffffff;
 }
 
-/* Titre */
+/* titel */
 .modal-content h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: 38px;
@@ -399,7 +399,7 @@ nav > a {
   margin: 0 0 25px;
 }
 
-/* Zone vidéo */
+/* video zone */
 .modal-video {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -416,7 +416,7 @@ nav > a {
   color: #d7b67a;
 }
 
-/* Informations du projet */
+/* informatie van het project */
 .modal-details h3 {
   color: #d7b67a;
   font-size: 14px;
@@ -498,7 +498,7 @@ nav > a {
 
 /* ===== YUMSPOT MODAL ===== */
 
-/* Capture du projet */
+/* foto project */
 .modal-preview {
   width: 100%;
   margin-bottom: 30px;
@@ -513,7 +513,7 @@ nav > a {
   object-fit: contain;
 }
 
-/* Bouton VIEW PROJECT */
+/* Button VIEW PROJECT */
 .modal-project-button {
   display: block;
   margin: 35px auto 0;
@@ -813,7 +813,7 @@ nav > a {
   transition: opacity 0.9s ease, visibility 0.9s ease;
 }
 
-/* Couche noire avec trou de lumière */
+/* Zwarte laag met lichtgat*/
 .intro-darkness {
   position: absolute;
   inset: 0;
@@ -839,7 +839,7 @@ nav > a {
   pointer-events: none;
 }
 
-/* Bouton Skip */
+/* Button Skip */
 .skip-intro {
   position: absolute;
   top: 30px;
@@ -858,7 +858,7 @@ nav > a {
   cursor: pointer;
 }
 
-/* Sortie de l'intro */
+/* Einde van de intro */
 .cinematic-intro.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -897,13 +897,13 @@ nav > a {
   z-index: 3;
   pointer-events: none;
 
-  /* Rectangle */
+  /* rechthoek */
   background: rgba(10, 8, 10, 0.95);
   border: 1px solid #d7b67a;
   border-radius: 8px;
   padding: 12px 20px;
 
-  /* Texte */
+  /* tekst */
   color: #f5ede7;
   font-family: "Inter", sans-serif;
   font-size: 12px;
@@ -911,11 +911,11 @@ nav > a {
   letter-spacing: 2px;
   white-space: nowrap;
 
-  /* Ombre */
+  /* shadow */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Indication adaptée au tactile */
+/* Aangepaste weergave voor aanraakschermen */
 @media (pointer: coarse) {
   .intro-cursor-text {
     display: block;

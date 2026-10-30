@@ -7,7 +7,6 @@ import aboutMe from './assets/about-me.jpg';
 
 document.querySelector('#app').innerHTML = `
 
-  <!-- ===== CINEMATIC INTRO ===== -->
 
  <!-- ===== FLASHLIGHT INTRO ===== -->
 
@@ -389,7 +388,7 @@ function closeVideoModal() {
   videoProject.focus();
 }
 
-// Ouvrir en cliquant sur la carte
+// oppenen door op het kaart te klikken
 videoProject.addEventListener('click', openVideoModal);
 
 // Ouvrir avec Entrée ou Espace
@@ -400,17 +399,17 @@ videoProject.addEventListener('keydown', (event) => {
   }
 });
 
-// Fermer avec le bouton ×
+// dicht doen met ×
 closeButton.addEventListener('click', closeVideoModal);
 
-// Fermer en cliquant sur le fond sombre
+// dicht doen door op het donker scherm te klikken
 videoModal.addEventListener('click', (event) => {
   if (event.target === videoModal) {
     closeVideoModal();
   }
 });
 
-// Fermer avec Échap
+// dicht doen met Échap
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && videoModal.style.display === 'flex') {
     closeVideoModal();
@@ -437,10 +436,10 @@ function closeYumspotModal() {
   yumspotProject.focus();
 }
 
-// Ouvrir en cliquant sur YumSpot
+// oppenen door te klikken op YumSpot
 yumspotProject.addEventListener('click', openYumspotModal);
 
-// Ouvrir avec Entrée ou Espace
+// oppenen met Enter of Space
 yumspotProject.addEventListener('keydown', (event) => {
   if (event.key === 'Enter' || event.key === ' ') {
     event.preventDefault();
@@ -448,17 +447,17 @@ yumspotProject.addEventListener('keydown', (event) => {
   }
 });
 
-// Fermer avec le bouton ×
+// dicht doen met ×
 yumspotCloseButton.addEventListener('click', closeYumspotModal);
 
-// Fermer en cliquant sur le fond sombre
+// dicht doen door op het donker scherm te klikken
 yumspotModal.addEventListener('click', (event) => {
   if (event.target === yumspotModal) {
     closeYumspotModal();
   }
 });
 
-// Fermer avec Échap
+// dicht doen met Échap
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && yumspotModal.style.display === 'flex') {
     closeYumspotModal();
@@ -488,10 +487,10 @@ function closeDoodleModal() {
   doodleProject.focus();
 }
 
-// Ouvrir au clic
+// oppenen door te klikken
 doodleProject.addEventListener('click', openDoodleModal);
 
-// Ouvrir avec Entrée ou Espace
+// oppenen met Enter of Space
 doodleProject.addEventListener('keydown', (event) => {
   if (event.key === 'Enter' || event.key === ' ') {
     event.preventDefault();
@@ -499,17 +498,17 @@ doodleProject.addEventListener('keydown', (event) => {
   }
 });
 
-// Fermer avec ×
+// dicht doen met ×
 doodleCloseButton.addEventListener('click', closeDoodleModal);
 
-// Fermer en cliquant sur le fond sombre
+// dicht doen door op het donker scherm te klikken
 doodleModal.addEventListener('click', (event) => {
   if (event.target === doodleModal) {
     closeDoodleModal();
   }
 });
 
-// Fermer avec Échap
+// dicht doen met Échap
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && doodleModal.style.display === 'flex') {
     closeDoodleModal();
@@ -522,10 +521,10 @@ const cinematicIntro = document.querySelector('#cinematic-intro');
 
 let introClosed = false;
 
-// Empêcher de faire défiler le site pendant l'intro
+// Voorkomen dat de website tijdens de intro wordt doorge scrolld
 document.body.style.overflow = 'hidden';
 
-// Déplacer la lampe torche
+// het licht verplaatsen
 cinematicIntro.addEventListener('pointermove', (event) => {
   if (introClosed) return;
 
@@ -533,7 +532,7 @@ cinematicIntro.addEventListener('pointermove', (event) => {
   cinematicIntro.style.setProperty('--mouse-y', `${event.clientY}px`);
 });
 
-// Révéler toute la Home
+// homepage tonen na het klikken op de intro
 function closeCinematicIntro() {
   if (introClosed) return;
 
@@ -547,6 +546,6 @@ function closeCinematicIntro() {
   }, { once: true });
 }
 
-// Cliquer n'importe où pour révéler la Home
+// Klik ergens om de startpagina weer te geven
 cinematicIntro.addEventListener('click', closeCinematicIntro);
 
